@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Client</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenue Client</h1>
+    <div>
+      <button id="switchVendeur">Passer au vendeur</button>
+    </div>
+  </header>
+
+  <div id="filters" class="filters">
+    <select id="cityFilter">
+      <option value="">Toutes les villes</option>
+      <option value="Abidjan">Abidjan</option>
+      <option value="Cocody">Cocody</option>
+      <option value="Marcory">Marcory</option>
+    </select>
+    <input type="number" id="priceFilter" placeholder="Prix max XOF" />
+    <button onclick="applyFilters()">Filtrer</button>
+  </div>
+
+  <div id="residences-container" class="grid-container"></div>
+
+  <!-- Popup réservation -->
+  <div id="reservationPopup" class="popup">
+    <div class="popup-content">
+      <h2 id="popupTitle"></h2>
+      <div id="sellerPhone" style="margin-bottom:10px;"></div>
+      <input type="text" id="clientName" placeholder="Votre nom">
+      <input type="text" id="clientPhone" placeholder="Votre téléphone">
+      <br>
+      <button onclick="confirmReservation()">Confirmer</button>
+      <button onclick="closePopup()">Annuler</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

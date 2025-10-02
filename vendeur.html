@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Vendeur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenue Vendeur</h1>
+    <div>
+      <button id="switchClient">Passer au client</button>
+    </div>
+  </header>
+
+  <div id="filters" class="filters">
+    <!-- <select id="cityFilter">
+      <option value="">Toutes les villes</option>
+      <option value="Abidjan">Abidjan</option>
+      <option value="Cocody">Cocody</option>
+      <option value="Marcory">Marcory</option>
+    </select>
+    <input type="number" id="priceFilter" placeholder="Prix max XOF" />
+    <button onclick="applyFilters()">Filtrer</button> -->
+    <button id="addBtn" onclick="openAddPopup()">Ajouter une résidence</button>
+  </div>
+
+  <div id="residences-container" class="grid-container"></div>
+
+  <!-- Popup Ajout Résidence -->
+  <div id="addResidencePopup" class="popup">
+    <div class="popup-content">
+      <h2>Ajouter une résidence</h2>
+      <input type="text" id="newTitle" placeholder="Titre">
+      <input type="text" id="newLocation" placeholder="Localisation">
+      <input type="number" id="newPrice" placeholder="Prix XOF">
+      <input type="file" id="newImage" placeholder="URL de l'image">
+      <input type="text" id="newPhone" placeholder="Numéro de téléphone du vendeur">
+      <br>
+      <button onclick="addResidence()">Ajouter</button>
+      <button onclick="closeAddPopup()">Annuler</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
